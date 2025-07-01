@@ -1,0 +1,145 @@
+/* ... (Collez le contenu de style.css ici) ... */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+.container {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 800px;
+  box-sizing: border-box;
+}
+
+h1,
+h2 {
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.balance-section {
+  background-color: #e7f3ff;
+  border: 1px solid #cce7ff;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+#currentBalance {
+  font-size: 2em;
+  font-weight: bold;
+  color: #007bff;
+}
+
+.transaction-form .input-group {
+  margin-bottom: 15px;
+}
+
+.transaction-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+}
+
+.transaction-form input[type="number"],
+.transaction-form input[type="text"] {
+  width: calc(100% - 22px); /* Adjust for padding and border */
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1em;
+}
+
+.converted-amount {
+  display: block;
+  margin-top: 5px;
+  font-size: 0.9em;
+  color: #777;
+}
+
+.buttons {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.buttons button {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #fff;
+  transition: background-color 0.3s ease;
+  margin: 0 10px;
+}
+
+.depot-btn {
+  background-color: #28a745; /* Vert */
+}
+
+.depot-btn:hover {
+  background-color: #218838;
+}
+
+.retrait-btn {
+  background-color: #dc3545; /* Rouge */
+}
+
+.retrait-btn:hover {
+  background-color: #c82333;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #eee;
+  margin: 40px 0;
+}
+
+.history-section table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.history-section th,
+.history-section td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.history-section th {
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+.history-section tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.history-section tr:hover {
+  background-color: #f1f1f1;
+}
+
+.transaction-type-depot {
+  color: #28a745;
+  font-weight: bold;
+}
+
+.transaction-type-retrait {
+  color: #dc3545;
+  font-weight: bold;
+}

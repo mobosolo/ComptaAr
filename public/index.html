@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestionnaire d'Argent</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Gestionnaire de Transactions</h1>
+
+      <div class="balance-section">
+        <h2>Solde Actuel : <span id="currentBalance">0 FCFA</span></h2>
+      </div>
+
+      <div class="transaction-form">
+        <h2>Nouvelle Transaction</h2>
+        <div class="input-group">
+          <label for="amount">Montant (ex: 500 pour 500.000 FCFA):</label>
+          <input type="number" id="amount" placeholder="Entrez le montant" />
+          <span id="convertedAmount" class="converted-amount"></span>
+        </div>
+        <div class="input-group">
+          <label for="description">Description (optionnel):</label>
+          <input
+            type="text"
+            id="description"
+            placeholder="Ex: Dépôt Sika, Retrait Kossi"
+          />
+        </div>
+        <div class="buttons">
+          <button id="addDepot" class="depot-btn">Ajouter Dépôt</button>
+          <button id="addRetrait" class="retrait-btn">Ajouter Retrait</button>
+        </div>
+      </div>
+
+      <hr />
+
+      <div class="history-section">
+        <h2>Historique des Transactions</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Type</th>
+              <th>Montant</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody id="transactionHistory"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <script src="/script.js"></script>
+  </body>
+</html>
