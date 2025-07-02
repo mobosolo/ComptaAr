@@ -7,13 +7,18 @@ const app = express();
 app.use(express.json()); // Pour parser les requêtes JSON
 
 // --- Configuration de la base de données SQLite ---
-// La base de données sera stockée dans le dossier "data" pour persister sur Vercel
-const DB_DIR = path.join(__dirname, "..", "data"); // Dossier "data" à la racine
-const DB_PATH = path.join(DB_DIR, "transactions.db");
+// Sur Vercel, on doit utiliser /tmp pour l'écriture, sinon data/ en local
+const isProd = process.env.NODE_ENV === "production" || process.env.VERCEL === "1";
+const DB_PATH = isProd
+  ? "/tmp/transactions.db"
+  : path.join(__dirname, "..", "data", "transactions.db");
 
-// Assurez-vous que le dossier DB_DIR existe
-if (!fs.existsSync(DB_DIR)) {
-  fs.mkdirSync(DB_DIR, { recursive: true });
+// En local, on crée le dossier data si besoin
+if (!isProd) {
+  const DB_DIR = path.join(__dirname, "..", "data");
+  if (!fs.existsSync(DB_DIR)) {
+    fs.mkdirSync(DB_DIR, { recursive: true });
+  }
 }
 
 let db = new sqlite3.Database(DB_PATH, (err) => {
