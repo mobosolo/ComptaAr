@@ -7,7 +7,6 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(express.json()); // Pour parser les requêtes JSON
-app.use(express.static(path.join(__dirname, "public")));
 
 // --- Configuration de la base de données PostgreSQL ---
 const pool = new Pool({
