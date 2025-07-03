@@ -1,4 +1,2 @@
-tmp/*.db
 .env
 node_modules/
-.vercel/
