@@ -198,7 +198,7 @@ hr {
     width: 100%; /* Les boutons prennent toute la largeur disponible */
     padding: 10px 15px;
     font-size: 1em;
-    margin: 0; /* Supprime les marges latérales pour qu'ils s'empilent */
+    margin: 10px 0;
   }
 
   .history-section table {
