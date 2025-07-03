@@ -158,3 +158,110 @@ hr {
 .delete-btn:hover {
   background-color: #da190b;
 }
+
+/* --- Styles pour les petits écrans (smartphones) --- */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px; /* Réduit le padding du conteneur */
+    margin: 10px; /* Ajoute un peu de marge sur les côtés */
+  }
+
+  h1 {
+    font-size: 1.8em; /* Réduit la taille du titre principal */
+  }
+
+  h2 {
+    font-size: 1.4em; /* Réduit la taille des sous-titres */
+  }
+
+  .balance-section #currentBalance {
+    font-size: 1.6em; /* Réduit la taille du solde */
+  }
+
+  .transaction-form .input-group label {
+    font-size: 0.9em; /* Réduit la taille du label */
+  }
+
+  .transaction-form input[type="number"],
+  .transaction-form input[type="text"] {
+    width: calc(100% - 20px); /* Ajuste la largeur pour le padding */
+    padding: 8px; /* Réduit le padding des inputs */
+    font-size: 0.9em;
+  }
+
+  .buttons {
+    flex-direction: column; /* Empile les boutons verticalement */
+    gap: 15px; /* Ajoute de l'espace entre les boutons empilés */
+  }
+
+  .buttons button {
+    width: 100%; /* Les boutons prennent toute la largeur disponible */
+    padding: 10px 15px;
+    font-size: 1em;
+    margin: 0; /* Supprime les marges latérales pour qu'ils s'empilent */
+  }
+
+  .history-section table {
+    font-size: 0.85em; /* Réduit la taille du texte du tableau */
+  }
+
+  .history-section th,
+  .history-section td {
+    padding: 8px; /* Réduit le padding des cellules du tableau */
+  }
+
+  /* Masquer certaines colonnes ou les rendre plus compactes pour les petits écrans */
+  .history-section th:nth-child(4), /* Description */
+    .history-section td:nth-child(4) {
+    display: none; /* Cache la colonne Description sur mobile */
+  }
+
+  /* Ajuster la largeur de la colonne Date si nécessaire */
+  .history-section th:nth-child(1),
+  .history-section td:nth-child(1) {
+    width: 30%; /* Donner plus de place à la date */
+  }
+  /* Ajuster la largeur des autres colonnes */
+  .history-section th:nth-child(2), .history-section td:nth-child(2), /* Type */
+    .history-section th:nth-child(3), .history-section td:nth-child(3), /* Montant */
+    .history-section th:nth-child(5), .history-section td:nth-child(5) {
+    /* Action */
+    width: 23%; /* Répartir le reste de la largeur */
+  }
+
+  .delete-btn {
+    padding: 5px 8px; /* Réduit la taille du bouton supprimer */
+    font-size: 0.8em;
+  }
+}
+
+/* --- Styles pour les écrans très petits (anciens smartphones) --- */
+@media (max-width: 480px) {
+  .container {
+    padding: 10px;
+    margin: 5px;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  h2 {
+    font-size: 1.2em;
+  }
+
+  .balance-section #currentBalance {
+    font-size: 1.4em;
+  }
+
+  .history-section th:nth-child(1),
+  .history-section td:nth-child(1) {
+    width: 35%; /* Encore plus de place pour la date */
+  }
+  .history-section th:nth-child(2), .history-section td:nth-child(2), /* Type */
+    .history-section th:nth-child(3), .history-section td:nth-child(3), /* Montant */
+    .history-section th:nth-child(5), .history-section td:nth-child(5) {
+    /* Action */
+    width: 20%; /* Répartir le reste */
+  }
+}
