@@ -1,4 +1,3 @@
-/* ... (Collez le contenu de style.css ici) ... */
 body {
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
@@ -142,4 +141,20 @@ hr {
 .transaction-type-retrait {
   color: #dc3545;
   font-weight: bold;
+}
+
+/* Nouveau style pour le bouton de suppression */
+.delete-btn {
+  background-color: #f44336; /* Rouge vif */
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: background-color 0.3s ease;
+}
+
+.delete-btn:hover {
+  background-color: #da190b;
 }
